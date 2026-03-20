@@ -7,6 +7,10 @@ const mobileMenuButton = document.querySelector("[data-mobile-menu-toggle]");
 const mobileNav = document.getElementById("mobile-nav");
 const mobileNavLinks = Array.from(document.querySelectorAll("[data-mobile-nav-link]"));
 
+function markPageReady() {
+  document.body.classList.add("page-ready");
+}
+
 function applyDarkAssets() {
   if (logoImg) {
     logoImg.src = "assets/logos/logokp.png";
@@ -31,6 +35,7 @@ function hidePageLoader() {
   document.body.classList.remove("is-loading");
 
   window.setTimeout(() => {
+    markPageReady();
     pageLoader.remove();
   }, 900);
 }
@@ -50,6 +55,7 @@ function setLoaderProgress(value) {
 
 function setupPageLoader() {
   if (!pageLoader) {
+    markPageReady();
     return;
   }
 

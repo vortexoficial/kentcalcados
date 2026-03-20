@@ -18,7 +18,7 @@
   --hero-glow-2: rgba(105, 170, 241, 0.2);
   --section-accent-bg: linear-gradient(180deg, #0b1e39 0%, #10284c 100%);
   --accent-gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --cta-gradient: linear-gradient(180deg, #5d92df 0%, #5689d4 100%);
+  --cta-gradient: linear-gradient(90deg, #5d92df 0%, #5f95e4 58%, #679ded 100%);
   --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.24);
   --shadow-md: 0 22px 60px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 32px 84px rgba(0, 0, 0, 0.34);
@@ -342,7 +342,13 @@ h1 {
   filter: blur(14px);
   transform: translateX(-220%) skewX(-20deg);
   animation: button-sheen 6.8s ease-in-out infinite;
+  animation-play-state: paused;
+  opacity: 0;
   pointer-events: none;
+}
+
+body.page-ready .btn::after {
+  animation-play-state: running;
 }
 
 .btn:hover,
