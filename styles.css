@@ -334,14 +334,14 @@ h1 {
 .btn::after {
   content: "";
   position: absolute;
-  top: -40%;
-  bottom: -40%;
-  left: -35%;
-  width: 34%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.26) 50%, rgba(255, 255, 255, 0.05) 80%, rgba(255, 255, 255, 0) 100%);
-  filter: blur(10px);
+  top: -55%;
+  bottom: -55%;
+  left: -42%;
+  width: 46%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18%, rgba(255, 255, 255, 0.38) 50%, rgba(255, 255, 255, 0.08) 82%, rgba(255, 255, 255, 0) 100%);
+  filter: blur(14px);
   transform: translateX(-220%) skewX(-20deg);
-  animation: button-sheen 4.8s ease-in-out infinite;
+  animation: button-sheen 6.8s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -951,16 +951,20 @@ h2 {
     opacity: 0;
   }
 
-  12% {
-    opacity: 0.9;
+  10% {
+    opacity: 0;
   }
 
-  32% {
+  20% {
+    opacity: 1;
+  }
+
+  42% {
     transform: translateX(430%) skewX(-20deg);
-    opacity: 0.28;
+    opacity: 0.36;
   }
 
-  33%,
+  43%,
   100% {
     transform: translateX(430%) skewX(-20deg);
     opacity: 0;
